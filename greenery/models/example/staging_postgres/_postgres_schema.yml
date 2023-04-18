@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: staging_addresses
+    description: Addresses of users
+    columns:
+      - name: address_id
+      - name: address 
+        
