@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    description: List of all page view events
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+      - name: session_id
+        tests:
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: page_url
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+      - name: event_type
+        tests:
+          - not_null
+          - accepted_values: 
+              values: ['page_view']
+      - name: order_id
+      - name: product_id
+        tests:
+          - not_null
+      - name: name
+        tests:
+          - not_null
+   
