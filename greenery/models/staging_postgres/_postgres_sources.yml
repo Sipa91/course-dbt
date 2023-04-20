@@ -6,6 +6,11 @@ sources:
     schema: public # this is the schema our raw data lives in
     database: raw # this is the name of our database
 
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
     tables:
       - name: addresses
       - name: events

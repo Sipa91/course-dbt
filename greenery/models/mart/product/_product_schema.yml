@@ -32,4 +32,17 @@ models:
       - name: name
         tests:
           - not_null
-   
+
+  - name: dim_products
+    description: List of all products, their prices as well as how often they were orders so far
+    columns:
+      - name: name
+        tests:
+          - unique
+          - not_null
+      - name: price
+        tests:
+          - not_null
+      - name: inventory
+      - name: orders_per_product
+       

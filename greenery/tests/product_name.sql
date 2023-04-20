@@ -1,4 +1,4 @@
---all product should have a name and a price
+--all product should have prices greater than 0
 SELECT *
 from {{ ref('dim_products') }}
-WHERE name IS NULL or price IS NULL
+WHERE price <= 0
