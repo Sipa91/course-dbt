@@ -32,3 +32,6 @@ NOTE: This is a hypothetical question vs. something we can analyze in our Greene
                 on u.address_id = a.address_id
                 GROUP BY 1,2,3,4,5,6
                 HAVING COUNT(order_id)> 1;
+
+# Lineage Graph
+![lineage_graph](pictures/lineage_graph.png)
