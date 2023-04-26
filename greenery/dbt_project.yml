@@ -38,3 +38,5 @@ models:
       +materialized: view
     marts:
       +materialized: table
+      +post-hook:
+      - "{{ grant_access(role='reporting') }}"

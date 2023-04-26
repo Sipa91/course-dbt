@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_events_products
+    description: List events and related product, event was referring to
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+      - name: session_id
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+      - name: event_type
+        tests:
+          - not_null
+          - accepted_values: 
+              values: ['page_view', 'add_to_cart', 'checkout', 'package_shipped']
+      - name: page_view
+      - name: add_to_cart
+      - name: checkout
+      - name: package_shipped 
+      - name: order_id
+      - name: product_name

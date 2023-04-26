@@ -1,37 +1,17 @@
 version: 2
 
 models:
-  - name: fact_page_views
-    description: List of all page view events
+  - name: fact_product_events_daily
+    description: Number of page views and adds to cart per product per day
     columns:
-      - name: event_id
-        tests:
-          - unique
-          - not_null
-      - name: session_id
+      - name: date
         tests:
           - not_null
-      - name: user_id
+      - name: product_name
         tests:
           - not_null
-      - name: page_url
-        tests:
-          - not_null
-      - name: created_at
-        tests:
-          - not_null
-      - name: event_type
-        tests:
-          - not_null
-          - accepted_values: 
-              values: ['page_view']
-      - name: order_id
-      - name: product_id
-        tests:
-          - not_null
-      - name: name
-        tests:
-          - not_null
+      - name: number_of_page_views
+      - name: number_of_added_to_cart
 
   - name: dim_products
     description: List of all products, their prices as well as how often they were orders so far

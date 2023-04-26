@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: events_dummy_coding
+    description: creates dummy table for event types
+    docs:
+      show: true 
+
+  - name: grant_access
+    description: grant access to specific roles given as argument
+    docs:
+      show: true 
