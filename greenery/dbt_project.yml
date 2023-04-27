@@ -34,9 +34,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   greenery:
     # Config indicated by + and applies to all files under models/example/
+    
     staging:
       +materialized: view
     marts:
       +materialized: table
       +post-hook:
       - "{{ grant_access(role='reporting') }}"
+
+on-run-end: 
+      - "{{ log_dbt_results(results) }}"
