@@ -40,5 +40,22 @@
                 LEFT JOIN sessions_per_product spp
                 on pp.product_name = spp.product_name;
     
-# Lineage Graph
 ![CR_per_product](pictures/CR_per_product.png)
+
+
+# Macros and packages
+- created macro for translating event_types into dummy coded table
+- created macro for granting access after models have run
+- used generate_surrogate_key from dbt.utils package
+- created macros for creating table containing dbt artifacts using [this article](https://medium.com/@oravidov/dbt-observability-101-how-to-monitor-dbt-run-and-test-results-f7e5f270d6b6) as source
+
+# Lineage graph Week3
+![](pictures/lineage_graph_w3.png)
+
+# Snapshot model
+Bamboo: 44
+Pothos: 0
+String of pearls:0
+ZZ Plant: 53
+Philodendron: 15
+Monstera: 50

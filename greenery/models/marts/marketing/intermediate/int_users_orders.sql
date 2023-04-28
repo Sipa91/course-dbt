@@ -1,4 +1,11 @@
-SELECT u.*,
+SELECT 
+u.user_id,
+u.first_name,
+u.last_name,
+u.email, 
+u.phone_number,
+u.created_at, 
+u.updated_at,
 a.address,
 a.state,
 a.country,

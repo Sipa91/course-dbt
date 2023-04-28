@@ -10,3 +10,13 @@ macros:
     description: grant access to specific roles given as argument
     docs:
       show: true 
+
+  - name: parse_dbt_results
+    description: flatten the result objects and extract selected fields
+    docs:
+      show: true 
+
+  - name: log_dbt_results
+    description: Get results variable as input parameter,flatten results using macro pare_dbt_results, insert to result table
+    docs:
+      show: true 
