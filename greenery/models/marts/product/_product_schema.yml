@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fact_product_events_daily
-    description: Number of page views and adds to cart per product per day
+    description: Number of page views, adds to cart and checkouts per product per day
     columns:
       - name: date
         tests:
@@ -12,9 +12,28 @@ models:
           - not_null
       - name: number_of_page_views
       - name: number_of_added_to_cart
+      - name: number_of_checkouts
+
+  - name: fact_product_sessions_per_event_daily
+    description: Number of unique sessions with page views, adds to cart and checkouts per product per day; can be further aggregated to product funnel over all or for each product
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: product_name
+        tests:
+          - not_null
+      - name: event_type
+        tests: 
+          - not_null
+          - accepted_values: 
+              values: ['page_view', 'add_to_cart', 'checkout']
+      - name: page_view
+      - name: add_to_cart
+      - name: checkout
 
   - name: dim_products
-    description: List of all products, their prices as well as how often they were orders so far
+    description: List of all products, their prices as well as how often they were ordered so far
     columns:
       - name: name
         tests:
