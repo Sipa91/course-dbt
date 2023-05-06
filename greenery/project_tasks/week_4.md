@@ -35,8 +35,14 @@ Product funnel is defined with 3 levels for our dataset:
 # Reflection 
 Reflecting on your learning in this class...
 
-if your organization is thinking about using dbt, how would you pitch the value of dbt/analytics engineering to a decision maker at your organization?
+### if your organization is thinking about using dbt, how would you pitch the value of dbt/analytics engineering to a decision maker at your organization?
+- we need a single source of truth for working with our data - with dbt we can publish and share data models which have the same underlying business logic and all analyses on top of these incorporate this same logic
+- using dbt makes our data base less error prone, since changing business logic once will be applied in all subsequent models without the need of copy-pasting - therefore we will have a more reliable source of truth
+- we can make our data pipeline more robust, by implementing tests and alerts 
+- the workflow with dbt improves collaboration between analysts and visibility/transparency of their work and saves time due to dbt`s nature of reusable and modular data models - this saves time and frees up time for analysts doing other tasks
 
-if your organization is using dbt, what are 1-2 things you might do differently / recommend to your organization based on learning from this course?
+### if your organization is using dbt, what are 1-2 things you might do differently / recommend to your organization based on learning from this course?
+- implement more tests!
+- start monitoring artifacts. e.g. run times
 
 if you are thinking about moving to analytics engineering, what skills have you picked that give you the most confidence in pursuing this next step?
