@@ -28,7 +28,7 @@ Product funnel is defined with 3 levels for our dataset:
 page views, added to cart and checkouts by product.
 It also contains the share of product page views of the overall sessions and the percentage of add_to_cart- and checkout-sessions of the product page view sessions.
 
-![](pictures/product_funnel_by_product.png)
+![](pictures/product_funnel_product.png)
 
 
 - I created a second model,  with the overall product funnel, not broken down by product
