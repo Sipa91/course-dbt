@@ -36,16 +36,27 @@ product_name,
 "add_to_cart" AS add_to_cart,
 "checkout" AS checkout
 from pivoted_table
+),
+
+ous as ( 
+    SELECT
+    DISTINCT product_name, 
+    COUNT(DISTINCT session_id) OVER() as overall_unique_sessions
+    from products_events
 )
 
 SELECT 
-product_name,
-page_view,
-add_to_cart, 
-checkout,
+ct.product_name,
+os.overall_unique_sessions,
+ct.page_view,
+ct.add_to_cart, 
+ct.checkout,
+ROUND(page_view/overall_unique_sessions, 2) as sessions_with_pageview,
 ROUND(add_to_cart/page_view, 2) as sessions_with_add_to_cart,
 ROUND(checkout/page_view, 2) as sessions_with_transaction
-from casted_table 
+from casted_table ct 
+LEFT JOIN ous os
+on ct.product_name = os.product_name
 ORDER BY 1
 
 
