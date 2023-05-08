@@ -44,4 +44,12 @@ models:
           - not_null
       - name: inventory
       - name: orders_per_product
+
+  - name: fct_product_funnel_by_product
+    description: Contains number of overall unique sessions plus page views, added to cart and checkouts by product. It also contains the share of product page views of the overall sessions and the percentage of add_to_cart- and checkout-sessions of the product page view sessions.
+   
+
+  - name: fct_product_funnel_overall
+    description:  Number of unique sessions with page views, added to cart and checkouts and the conversion rates for each step, over all products
+    
        
